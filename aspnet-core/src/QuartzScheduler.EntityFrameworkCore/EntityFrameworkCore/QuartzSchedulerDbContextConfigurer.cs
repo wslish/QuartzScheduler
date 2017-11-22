@@ -7,12 +7,12 @@ namespace QuartzScheduler.EntityFrameworkCore
     {
         public static void Configure(DbContextOptionsBuilder<QuartzSchedulerDbContext> builder, string connectionString)
         {
-            builder.UseSqlServer(connectionString);
+            builder.UseMySql(connectionString);
         }
 
         public static void Configure(DbContextOptionsBuilder<QuartzSchedulerDbContext> builder, DbConnection connection)
         {
-            builder.UseSqlServer(connection);
+            builder.UseMySql(connection);
         }
     }
 }
